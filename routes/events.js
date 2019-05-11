@@ -1,9 +1,10 @@
 import express from 'express';
-import create from '../contollers/events';
+import events from '../contollers/events';
+import createValidation from './middleware/event.validation';
 
 const router = express.Router();
 
-router.post('/', create);
-// router.get('/', getAll);
+router.post('/', createValidation, events.create);
+router.get('/', events.getAll);
 
 export default router;
