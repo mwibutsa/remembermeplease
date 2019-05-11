@@ -22,13 +22,20 @@ const handleClick = (draft = '') => (event) => {
   const queries = processQueries(
     window.location.search.replace('?', '').split('&')
   );
-  fetch(`../events/${queries.id}/send-message${draft}`, {
-    method: 'POST',
-    body: JSON.stringify({ content: messageText.value }),
-    headers: myHeaders,
-  }).then((res) => {
-    console.log(res.body.error);
-  });
+  fetch(
+    `https://remembermeplease.herokuapp.com/events/${
+      queries.id
+    }/send-message${draft}`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ content: messageText.value }),
+      headers: myHeaders,
+    }
+  )
+    .then((result) => {
+      console.log(result.message);
+    })
+    .catch((err) => console.log(err));
 };
 saveDraft.addEventListener('click', handleClick('?draft=true'));
 sendNow.addEventListener('click', handleClick(''));
