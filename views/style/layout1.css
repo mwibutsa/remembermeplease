@@ -1,0 +1,64 @@
+/* CSS Document */
+.header
+{
+ height: 120px;
+ background: #FF8080;
+}
+.header content
+{
+ width: 33.333%;
+ color: white;
+ font-size: 50px;
+}
+.body
+{
+ height: 1620px;
+ overflow: auto;
+ padding:20px 40px;
+}
+.body .header-label
+{
+ width: 100%;
+ padding-top: 70px;
+ font-size: 60px;
+ font-family: opensans;
+ font-weight: bold;
+}
+.body .no-header-label
+{
+ font-size: 50px;
+ font-weight:lighter; 
+ font-family: opensans;
+ width: 100%;
+}
+.lower
+{
+ height: auto;
+}
+.plus-button
+{
+ width: 150px;
+ height: 100px;
+ color: white;
+ border: none;
+ font-size: 80px;
+ background-color: #FF8080;
+ text-align: center;
+ border-radius: 50%;
+ cursor: pointer;
+ padding-bottom: 15%;
+ position: absolute;
+ right: 40px;
+ bottom: 50px;
+}
+.less-plus-button
+{
+ width: 60px;
+ height: 50px;
+ background:#B6B6B6;
+ color: white;
+ cursor: pointer;
+ border-radius: 50%;
+ padding-bottom: 8%;
+ border: none;
+}
