@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import passport from 'passport';
 import session from 'express-session';
-import socialRouter from './routes/socialLogin'
+import events from './routes/events'
 
 import './config/passport';
 
@@ -29,10 +29,12 @@ app.use(session({
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to remember me please' });
 });
-app.use('/auth', socialRouter);
+app.use('/events', events);
 
 app.use('/user', userRouter);
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`server started on port ${port}`);
 });
+
+export default server;
