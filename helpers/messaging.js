@@ -1,20 +1,13 @@
 import client from '../config/twilio-client';
-
-const sendMessage = (
-  type = 'whatsapp:',
-  message,
-  from = '+14155238886',
-  to
-) => {
-  let sentMessage = '';
-  client
+const sendMessage = (message, to) => {
+  client.messages
     .create({
-      from: `${type}${from}`,
-      to: `${type}${to}`,
+      from: `whatsapp:+14155238886`,
+      to: `whatsapp:${to}`,
       body: `${message}`,
     })
-    .then((message) => (sendMessage = message));
-  return sentMessage;
+    .then((message) => console.log(message))
+    .catch((err) => console.log('====', err, '===='));
 };
 
 export default sendMessage;
