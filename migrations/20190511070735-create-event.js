@@ -8,17 +8,33 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      userId: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
       type: {
         type: Sequelize.STRING
       },
-      date: {
-        type: Sequelize.DATE
+      day: {
+        type: Sequelize.INTEGER
+      },
+      month: {
+        type: Sequelize.INTEGER
+      },
+      year: {
+        type: Sequelize.INTEGER
+      },
+      phonenumber: {
+        type: Sequelize.STRING
+      },
+      country: {
+        type: Sequelize.STRING
       },
       target: {
         type: Sequelize.STRING
       },
       notificationTime: {
-        type: Sequelize.TIME
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
