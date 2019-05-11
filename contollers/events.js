@@ -9,7 +9,7 @@ const events = {
             const newEvent = await Event.create(event);
             let newMessage;
             if (req.body.message) {
-                newMessage = await Message.create({ content: req.body.message });
+                newMessage = await Message.create({ content: req.body.message, userId: 1, eventId: newEvent.id});
             }
             return res.status(200).json({
                 message: 'Event created successfully',

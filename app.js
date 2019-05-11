@@ -40,19 +40,19 @@ nofifyer.schedule('* * * * * *', async () => {
     sendMessage(message, event.user_phone);
   });
 
-  // const todaysEvents = await getTodaysEvents();
-  // console.log(todaysEvents);
-  // todaysEvents.forEach((event) => {
-  //   if (event.messages.length === 0) {
-  //     const message = `Hello ${event.firstname} ${event.lastname} Your ${
-  //       event.target
-  //       }'s ${event.type} Is happening in today`;
-  //     console.log(event);
+  const todaysEvents = await getTodaysEvents();
+  console.log(todaysEvents);
+  todaysEvents.forEach((event) => {
+    if (event.messages.length === 0) {
+      const message = `Hello ${event.firstname} ${event.lastname} Your ${
+        event.target
+        }'s ${event.type} Is happening in today`;
+      console.log(event);
 
-  //     sendMessage(message, event.User.phonenumber);
-  //   }
-  //   console.log(event);
-  // })
+      sendMessage(message, event.User.phonenumber);
+    }
+    console.log(event);
+  })
 
 });
 app.get('/', (req, res) => {
