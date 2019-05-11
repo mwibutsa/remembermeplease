@@ -21,7 +21,10 @@ app.use(express.json());
 app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'views')));
+<<<<<<< HEAD
 app.use(express.static(path.resolve(__dirname, 'views/front-end')));
+=======
+>>>>>>> add send later messages
 // nofifyer.schedule('* * * * *', async () => {
 //   const events = await upcomingEvents();
 //   events.forEach((event) => {
@@ -32,13 +35,13 @@ app.use(express.static(path.resolve(__dirname, 'views/front-end')));
 //   });
 // });
 nofifyer.schedule('* * * * * *', async () => {
-  const events = await upcomingEvents();
-  events.forEach((event) => {
-    const message = `Hello ${event.firstname} ${event.lastname} Your ${
-      event.target
-      }'s ${event.type} Is happening in ${event.notificationTime} days`;
-    sendMessage(message, event.user_phone);
-  });
+  // const events = await upcomingEvents();
+  // events.forEach((event) => {
+  //   const message = `Hello ${event.firstname} ${event.lastname} Your ${
+  //     event.target
+  //     }'s ${event.type} Is happening in ${event.notificationTime} days`;
+  //   sendMessage(message, event.user_phone);
+  // });
 
   // const todaysEvents = await getTodaysEvents();
   // console.log(todaysEvents);
