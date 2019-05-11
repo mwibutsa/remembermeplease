@@ -1,14 +1,21 @@
-import { Event } from '../models';
+import { Event, Message } from '../models';
+import select from 'lodash';
 const events = {
     create: async (req, res) => {
         try {
-            const event = req.body;
+            let event = req.body;
+            event = select.pick(event, ['type', 'day', 'month', 'year', 'target', 'phonenumber', 'country', 'notificationTime'])
             event.userId = 1;
             const newEvent = await Event.create(event);
+            let newMessage;
+            if (req.body.message) {
+                newMessage = await Message.create({ content: req.body.message });
+            }
             return res.status(200).json({
                 message: 'Event created successfully',
-                newEvent
-            })
+                newEvent,
+                message: newMessage.content,
+            });
         } catch (e) {
             res.status(500).json({
                 message: 'error',
