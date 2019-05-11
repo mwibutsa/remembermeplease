@@ -39,6 +39,7 @@
     "sequelize": "^5.8.5",
     "sequelize-cli": "^5.4.0",
     "session": "^0.1.0",
+    "joi": "^14.3.1",
     "twilio": "^3.30.3"
   },
   "devDependencies": {
