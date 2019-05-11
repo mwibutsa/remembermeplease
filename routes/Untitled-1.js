@@ -1,0 +1,9 @@
+    "userId": "",
+    "type": "",
+    "day": "",
+    "month": "",
+    "year": "",
+    "phonenumber": "",
+    "country": "",
+    "target": "",
+    "notificationTime": ""
