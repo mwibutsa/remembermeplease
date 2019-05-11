@@ -5,6 +5,7 @@ import session from 'express-session';
 import events from './routes/events';
 import upcomingEvents from './helpers/check-dates';
 import sendMessage from './helpers/messaging';
+import path from 'path';
 
 import socialRouter from './routes/socialLogin';
 import nofifyer from 'node-cron';
@@ -30,6 +31,7 @@ app.use(
     secret: process.env.SECRET,
   })
 );
+app.use(express.static(path.resolve(__dirname, 'views')));
 // nofifyer.schedule('* * * * *', async () => {
 //   const events = await upcomingEvents();
 //   events.forEach((event) => {
