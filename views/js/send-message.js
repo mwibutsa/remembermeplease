@@ -32,9 +32,7 @@ const handleClick = (draft = '') => (event) => {
       headers: myHeaders,
     }
   )
-    .then((result) => {
-      console.log(result.message);
-    })
+    .then((result) => {})
     .catch((err) => console.log(err));
 };
 saveDraft.addEventListener('click', handleClick('?draft=true'));
