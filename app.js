@@ -32,6 +32,7 @@ app.use(
   })
 );
 app.use(express.static(path.resolve(__dirname, 'views')));
+app.use(express.static(path.resolve(__dirname, 'views/front-end')));
 // nofifyer.schedule('* * * * *', async () => {
 //   const events = await upcomingEvents();
 //   events.forEach((event) => {

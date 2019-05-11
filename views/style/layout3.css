@@ -1,61 +1,50 @@
 /* CSS Document */
 /* CSS Document */
 /* CSS Document */
-.header
-{
- height: 120px;
- background: #FF8080;
+.header {
+  height: 120px;
+  background: #ff8080;
 }
-.header content
-{
- width: 33.333%;
- color: white;
- font-size: 50px;
+.header content {
+  width: 33.333%;
+  color: white;
+  font-size: 50px;
 }
-.sub-header .content
-{
- background-color: #F1F1F1;
- height: 180px;
- width: 50%;
+.sub-header .content {
+  background-color: #f1f1f1;
+  height: 180px;
+  width: 50%;
 }
-.body
-{
- height: 1130px;
- overflow: auto;
- padding:50px 30px;
+.body {
+  height: 1130px;
+  overflow: auto;
+  padding: 50px 30px;
 }
-.body .header-label
-{
- width: 100%;
- font-size: 60px;
- font-family: opensans;
- font-weight: bold;
+.body .header-label {
+  width: 100%;
+  font-size: 60px;
+  font-family: 'Open Sans', san-serif;
+  font-weight: bold;
 }
-.body .no-header-label
-{
- font-size: 50px;
- font-weight:lighter; 
- font-family: opensans;
- width: 100%;
+.body .no-header-label {
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: 'Open Sans', san-serif;
+  width: 100%;
 }
-.lower-part
-{
- padding: 0px 30px;
+.lower-part {
+  padding: 0px 30px;
 }
-.lower-part input[type=submit]
-{
- width: 80%;
- height: 110px; 
- border: none;
- font-size: 50px;
- border-radius: 20px;
+.lower-part input[type='submit'] {
+  width: 80%;
+  height: 110px;
+  border: none;
+  font-size: 50px;
+  border-radius: 20px;
 }
-.lower-part .draft
-{
- background: #004080;
-} 
-.lower-part .done
-{
- background: #00FF40;
-} 
-
+.lower-part .draft {
+  background: #004080;
+}
+.lower-part .done {
+  background: #00ff40;
+}
