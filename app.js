@@ -22,15 +22,15 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(express.static(path.resolve(__dirname, 'views/front-end')));
-// nofifyer.schedule('* * * * *', async () => {
-//   const events = await upcomingEvents();
-//   events.forEach((event) => {
-//     const message = `Hello ${event.firstname} ${event.lastname} Your ${
-//       event.target
-//     }'s ${event.type} Is happening in ${event.notificationTime} days`;
-//     sendMessage(message, event.user_phone);
-//   });
-// });
+nofifyer.schedule('* * * * *', async () => {
+  const events = await upcomingEvents();
+  events.forEach((event) => {
+    const message = `Hello ${event.firstname} ${event.lastname} Your ${
+      event.target
+    }'s ${event.type} Is happening in ${event.notificationTime} days`;
+    sendMessage(message, event.user_phone);
+  });
+});
 nofifyer.schedule('* * * * * *', async () => {
   // const events = await upcomingEvents();
   // events.forEach((event) => {
@@ -39,7 +39,6 @@ nofifyer.schedule('* * * * * *', async () => {
   //     }'s ${event.type} Is happening in ${event.notificationTime} days`;
   //   sendMessage(message, event.user_phone);
   // });
-
   // const todaysEvents = await getTodaysEvents();
   // console.log(todaysEvents);
   // todaysEvents.forEach((event) => {
@@ -48,12 +47,10 @@ nofifyer.schedule('* * * * * *', async () => {
   //       event.target
   //       }'s ${event.type} Is happening in today`;
   //     console.log(event);
-
   //     sendMessage(message, event.User.phonenumber);
   //   }
   //   console.log(event);
   // })
-
 });
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to remember me please' });
