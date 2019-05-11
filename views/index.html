@@ -1,89 +1,70 @@
 <!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>RememberPlease</title>
-    <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.css" />
-    <link rel="stylesheet" href="style/layout1.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 header">
-          <div class="col-sm-4 content" style="padding-top: 7px;">
-            <img
-              src="profile/img_avatar2.png"
-              style="width: 110px; height:110px; border-radius: 50%;"
-            />
-          </div>
-          <div
-            class="col-sm-4 content"
-            style="font-size: 50px; color: #EFEFEF; padding-top: 20px;"
-          >
-            Birthday list
-          </div>
-          <div class="col-sm-4 content"></div>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>RememberPlease</title>
+  <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" href="style/layout1.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container-fluid" id="wrapper">
+    <div class="row">
+      <div class="col-sm-12 header">
+        <div class="col-sm-4 content" style="padding-top: 7px;">
+          <img src="profile/img_avatar2.png" style="width: 110px; height:110px; border-radius: 50%;" />
+        </div>
+        <div class="col-sm-4 content" style="font-size: 50px; color: #EFEFEF; padding-top: 20px;">
+          Birthday list
+        </div>
+        <div class="col-sm-4 content"></div>
+      </div>
+
+      <div class="col-sm-12 body">
+        <!------------------------------------------------- Programming part --------------------------------------------->
+        <label class="header-label">TODAY
+          <hr /></label>
+        <div id="today">
+          <label class="no-header-label">Jane
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
+          <label class="no-header-label">Jonathan
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
         </div>
 
-        <div class="col-sm-12 body">
-          <!------------------------------------------------- Programming part --------------------------------------------->
-          <label class="header-label"
-            >TODAY
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jane
-            <img
-              src="profile/add.jpg"
-              style="width: 7%;"
-              align="right"
-              onclick="location.href='write-message.html?id=1'"/>
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jonathan
-            <img src="profile/add.jpg" style="width: 7%;" align="right"/>
-            <hr
-          /></label>
 
-          <label class="header-label"
-            >TOMORROW
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jane <img src="profile/add.jpg" style="width: 7%;" align="right"/>
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jonathan
-            <img src="profile/add.jpg" style="width: 7%;" align="right"/>
-            <hr
-          /></label>
-
-          <label class="header-label"
-            >THIS MONTH
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jane <img src="profile/add.jpg" style="width: 7%;" align="right"/>
-            <hr
-          /></label>
-          <label class="no-header-label"
-            >Jonathan
-            <img src="profile/add.jpg" style="width: 7%;" align="right"/>
-            <hr
-          /></label>
-
-          <button class="plus-button">+</button>
+        <label class="header-label">This week
+          <hr /></label>
+        <div id="this_week">
+          <label class="no-header-label">Jane
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
+          <label class="no-header-label">Jonathan
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
         </div>
+
+        <label class="header-label">THIS MONTH
+          <hr /></label>
+        <div id="this_month">
+          <label class="no-header-label">Jane
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
+          <label class="no-header-label">Jonathan
+            <img src="profile/add.jpg" style="width: 7%;" align="right" onclick="location.href='editBirthday.html'" />
+            <hr /></label>
+        </div>
+
+        <button onclick="location.href='editBirthday.html'" class="plus-button">+</button>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+<script src="./js/listEvents.js"></script>
+
 </html>

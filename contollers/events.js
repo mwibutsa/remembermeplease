@@ -36,19 +36,15 @@ const events = {
                 const currentMonth = new Date().getMonth() + 1;
                 const currentDay = new Date().getDate();
                 const currentTime = (new Date(`${currentYear}-${currentMonth}-${currentDay}`)).getTime();
-                console.log(new Date(currentTime));
 
                 if (!event.year) event.year = currentYear;
                 const { day, month, year } = event;
                 const eventTime = (new Date(`${year}-${month}-${day}`)).getTime();
                 const diff = (eventTime - currentTime) / (1000 * 60 * 60 * 24);
-                console.log('diff 1', diff);
+
                 if (Math.sign(diff) !== -1 && 0 <= diff < 2) {
-
-
                     todays.push(event.dataValues);
                 } else if (Math.sign(diff) === 1 && 2 < diff < 7) {
-                    console.log('diff 2', diff);
                     thisWeek.push(event.dataValues);
                 } else if (Math.sign(diff) === 1 && diff >= 7) {
                     other.push(event.dataValues);
@@ -77,6 +73,24 @@ const events = {
             })
         }
     },
+    getOne: async (req, res) => {
+        try {
+            const event = await Event.findOne({
+                where: {
+                    id: req.params.id,
+                }
+            });
+            return res.status(200).json({
+                status: 200,
+                event,
+            })
+        } catch (e) {
+            res.status(500).json({
+                message: 'error',
+                error: e.message,
+            })
+        }
+    }
 }
 
 export default events;

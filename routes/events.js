@@ -12,5 +12,6 @@ router.post('/:eventId/send-message', sendEventMessage);
 router.post('/', createValidation, events.create);
 router.get('/:eventId/messages', getEventMessage);
 router.get('/', events.getAll);
+router.get('/:id', events.getOne);
 
 export default router;

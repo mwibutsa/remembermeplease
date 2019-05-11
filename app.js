@@ -21,10 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'views')));
-<<<<<<< HEAD
 app.use(express.static(path.resolve(__dirname, 'views/front-end')));
-=======
->>>>>>> add send later messages
 // nofifyer.schedule('* * * * *', async () => {
 //   const events = await upcomingEvents();
 //   events.forEach((event) => {
