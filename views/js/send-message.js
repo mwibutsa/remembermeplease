@@ -22,16 +22,11 @@ const handleClick = (draft = '') => (event) => {
   const queries = processQueries(
     window.location.search.replace('?', '').split('&')
   );
-  fetch(
-    `https://remembermeplease.herokuapp.com/events/${
-      queries.id
-    }/send-message${draft}`,
-    {
-      method: 'POST',
-      body: JSON.stringify({ content: messageText.value }),
-      headers: myHeaders,
-    }
-  )
+  fetch(`../events/${queries.id}/send-message${draft}`, {
+    method: 'POST',
+    body: JSON.stringify({ content: messageText.value }),
+    headers: myHeaders,
+  })
     .then((result) => {})
     .catch((err) => console.log(err));
 };
