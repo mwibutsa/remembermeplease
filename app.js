@@ -30,15 +30,15 @@ app.use(
     secret: process.env.SECRET,
   })
 );
-nofifyer.schedule('* * * * *', async () => {
-  const events = await upcomingEvents();
-  events.forEach((event) => {
-    const message = `Hello ${event.firstname} ${event.lastname} Your ${
-      event.target
-    }'s ${event.type} Is happening in ${event.notificationTime} days`;
-    sendMessage(message, event.user_phone);
-  });
-});
+// nofifyer.schedule('* * * * *', async () => {
+//   const events = await upcomingEvents();
+//   events.forEach((event) => {
+//     const message = `Hello ${event.firstname} ${event.lastname} Your ${
+//       event.target
+//     }'s ${event.type} Is happening in ${event.notificationTime} days`;
+//     sendMessage(message, event.user_phone);
+//   });
+// });
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to remember me please' });
 });

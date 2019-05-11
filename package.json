@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node app.js",
     "dev": "nodemon --exec babel-node app.js",
-    "migrate": "node_modules/.bin/sequelize db:migrate:undo:all && node_modules/.bin/sequelize db:migrate"
+    "migrate": "node_modules/.bin/sequelize db:migrate:undo:all && node_modules/.bin/sequelize db:migrate",
+    "start:heroku": "npx sequelize db:migrate && babel-node app.js"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "repository": {
     "type": "git",

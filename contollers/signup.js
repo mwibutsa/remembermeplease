@@ -21,7 +21,6 @@ const createAccount = async (req, res) => {
     password: hashPassword(password),
   })
     .then((user) => {
-      console.log(user);
       res.status(201).json(user);
     })
     .catch((err) => res.status(500).json(err));
