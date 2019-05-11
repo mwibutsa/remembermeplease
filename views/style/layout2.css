@@ -1,5 +1,6 @@
-/* CSS Document */
-/* CSS Document */
+body {
+  font-size: 1.2em;
+}
 .header {
   height: 120px;
   background: #ff8080;
@@ -46,4 +47,11 @@
 }
 .lower-part .done {
   background: #00ff40;
+}
+textarea {
+  font-size: 2rem;
+  color: #333;
+}
+input[type='submit'] {
+  color: white;
 }

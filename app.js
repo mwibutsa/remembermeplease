@@ -6,6 +6,7 @@ import events from './routes/events';
 import upcomingEvents from './helpers/check-dates';
 import sendMessage from './helpers/messaging';
 import path from 'path';
+import cors from 'cors';
 
 import socialRouter from './routes/socialLogin';
 import nofifyer from 'node-cron';
@@ -20,6 +21,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors());
 
 app.use(passport.initialize());
 app.use(passport.session());
