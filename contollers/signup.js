@@ -1,8 +1,11 @@
-import { create } from '../models/user';
+import { create, getUsers } from '../models/user';
 const createAccount = (req, res) => {
   const user = create({ name: 'Mwibutsa Floribert', password: 'password' });
-
-  res.json(user);
+  if (user.length) {
+    res.json(user);
+  } else {
+    res.json({ error: 'User is already registered' });
+  }
 };
 
 export default createAccount;

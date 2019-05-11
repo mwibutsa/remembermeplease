@@ -7,7 +7,6 @@ import events from './routes/events'
 import './config/passport';
 
 import userRouter from './routes/user';
-import createAccount from './contollers/signup';
 
 const port = process.env.PORT || 3000;
 const app = express();
