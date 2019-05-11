@@ -3,6 +3,6 @@ import createAccount from '../contollers/signup';
 
 const router = express.Router();
 
-router.get('/', createAccount);
+router.post('/', createAccount);
 
 export default router;
