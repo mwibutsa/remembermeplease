@@ -1,14 +1,21 @@
-import { Event } from '../models';
+import { Event, Message } from '../models';
+import select from 'lodash';
 const events = {
     create: async (req, res) => {
         try {
-            const event = req.body;
+            let event = req.body;
+            event = select.pick(event, ['type', 'day', 'month', 'year', 'target', 'phonenumber', 'country', 'notificationTime'])
             event.userId = 1;
             const newEvent = await Event.create(event);
+            let newMessage;
+            if (req.body.message) {
+                newMessage = await Message.create({ content: req.body.message, userId: 1, eventId: newEvent.id});
+            }
             return res.status(200).json({
                 message: 'Event created successfully',
-                newEvent
-            })
+                newEvent,
+                message: newMessage.content,
+            });
         } catch (e) {
             res.status(500).json({
                 message: 'error',
@@ -29,19 +36,15 @@ const events = {
                 const currentMonth = new Date().getMonth() + 1;
                 const currentDay = new Date().getDate();
                 const currentTime = (new Date(`${currentYear}-${currentMonth}-${currentDay}`)).getTime();
-                console.log(new Date(currentTime));
 
                 if (!event.year) event.year = currentYear;
                 const { day, month, year } = event;
                 const eventTime = (new Date(`${year}-${month}-${day}`)).getTime();
                 const diff = (eventTime - currentTime) / (1000 * 60 * 60 * 24);
-                console.log('diff 1', diff);
+
                 if (Math.sign(diff) !== -1 && 0 <= diff < 2) {
-
-
                     todays.push(event.dataValues);
                 } else if (Math.sign(diff) === 1 && 2 < diff < 7) {
-                    console.log('diff 2', diff);
                     thisWeek.push(event.dataValues);
                 } else if (Math.sign(diff) === 1 && diff >= 7) {
                     other.push(event.dataValues);
@@ -70,6 +73,24 @@ const events = {
             })
         }
     },
+    getOne: async (req, res) => {
+        try {
+            const event = await Event.findOne({
+                where: {
+                    id: req.params.id,
+                }
+            });
+            return res.status(200).json({
+                status: 200,
+                event,
+            })
+        } catch (e) {
+            res.status(500).json({
+                message: 'error',
+                error: e.message,
+            })
+        }
+    }
 }
 
 export default events;

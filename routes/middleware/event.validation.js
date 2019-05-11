@@ -5,10 +5,12 @@ const create = (req, res, next) => {
         type: Joi.string().required(),
         day: Joi.number().required(),
         month: Joi.number().required(),
+        year: Joi.number(),
         target: Joi.string().required(),
         phonenumber: Joi.string().required(),
         country: Joi.string().required(),
         notificationTime: Joi.number().required(),
+        message: Joi.string(),
     };
 
     const result = Joi.validate(req.body, eventSchema);
