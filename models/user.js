@@ -1,20 +1,16 @@
-import fs from 'fs';
-import path from 'path';
-import { json } from 'body-parser';
-
-const dataUrl = path.resolve(__dirname, '../database/users.json');
-export const getUsers = () => {
-  const user = fs.readFileSync(dataUrl, {
-    encoding: 'utf8',
-  });
-  return JSON.parse(user);
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    fistname: DataTypes.STRING,
+    lastname: DataTypes.STRING,
+    email: DataTypes.STRING,
+    phonenumber: DataTypes.STRING,
+    region: DataTypes.STRING,
+    birthday: DataTypes.STRING,
+    password: DataTypes.STRING
+  }, {});
+  User.associate = function(models) {
+    // associations can be defined here
+  };
+  return User;
 };
-export const create = (newUser) => {
-  const allUsers = getUsers();
-  allUsers.push(newUser);
-  const updatedUsers = [...allUsers];
-  fs.writeFileSync(dataUrl, JSON.stringify(updatedUsers));
-  return newUser;
-};
-
-export default getUsers();
