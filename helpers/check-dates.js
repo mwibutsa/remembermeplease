@@ -19,7 +19,7 @@ const upcomingEvents = async () => {
     const timeDifference =
       eventTime - todaysDaysTime - notificationTime * 24 * 60 * 60 * 100;
     const dayDifference = timeDifference / (24 * 60 * 60 * 1000);
-    return dayDifference > 0 && dayDifference < 1;
+    return dayDifference >= 0 && dayDifference < 1;
   });
   const formatEventObject = [];
   eventsToShoutOut.forEach((event) => {
