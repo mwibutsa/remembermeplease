@@ -16,7 +16,7 @@ const sendEventMessage = async (req, res) => {
       sendMessage(content, event.phonenumber);
     }
   }
-  res.status(201).json(message);
+  res.status(201).json({ message });
 };
 
 export default sendEventMessage;
