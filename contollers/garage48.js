@@ -23,7 +23,10 @@ const sendToGarage = (req, res) => {
   console.log(numbers);
   numbers.forEach((number) => {
     sendWithChatApi(
-      'Hello this is a message to Test if A message to garage48 Will Work',
+      `Happy 9th birthday, dear Garage48!
+      Make sure you have an extra shot for me!
+      Hugs,
+      RememberPlease Team`,
       number
     );
   });
