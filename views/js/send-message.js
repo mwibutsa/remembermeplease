@@ -46,8 +46,9 @@ const loadMessage = () => {
         messageText.value = message.content;
       }
     })
-    .then((result) => { })
+    .then((result) => {})
     .catch((err) => console.log(err));
 };
+onclick = "location.href='congratulations.html'";
 saveDraft.addEventListener('click', handleClick('?draft=true'));
 sendNow.addEventListener('click', handleClick(''));
