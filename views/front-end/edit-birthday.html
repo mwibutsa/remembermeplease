@@ -1,0 +1,84 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>RememberPlease</title>
+    <link rel="stylesheet" href="../bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="../style/layout3.css" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12 header">
+                <div class="col-sm-4" style="font-size: 50px; padding-top: 20px; white-space: nowrap;"><a
+                        href="taskEvent.html" style="color: #EFEFEF;"> Cancel </a></div>
+                <div class="col-sm-4" style="font-size: 50px; color: #EFEFEF; padding-top: 20px; white-space: nowrap;">
+                    Edit Birthday </div>
+                <div class="col-sm-4"> </div>
+            </div>
+
+            <div class="col-sm-12 sub-header">
+                <table width="100%">
+                    <tr>
+                        <td rowspan='2'><img src="../profile/Garage 48 Avatar.png"
+                                style="width: 110px; height:110px; border-radius: 50%;" /></td>
+                        <td style="color: #878787; font-size: 40px;">Name </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" value="Garage48" id="name" /></td>
+                    </tr>
+                    <tr>
+                        <td rowspan='2'><img src="../profile/Calendar icon.png" style="width: 110px; height:110px;" />
+                        </td>
+                        <td style="color: #878787; font-size: 50px;">Date </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="eventDate" value="12/05/19" id="eventDate" /></td>
+                    </tr>
+                    <tr>
+                        <td rowspan='2'><img src="../profile/Whatsapp icon.png" style="width: 110px; height:110px;" />
+                        </td>
+                        <td style="color: #878787; font-size: 50px;">WhatsApp number</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="whatsapp" value="+250787740316" id="whatsapp" /></td>
+                    </tr>
+                    <tr>
+                        <td rowspan='2'><img src="../profile/Languages icon.png" style="width: 110px; height:110px;" />
+                        </td>
+                        <td style="color: #878787; font-size: 50px;">Message Language: </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="language" value="English" id="language" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <p style="font-size: 45px; padding: 70px 0px 0px 30px;">Compose your happy birthday message here:</p>
+            <div class="col-sm-12 body">
+                <textarea id="message"
+                    style="width: 100%; height:100%; border: none; font-size: 39px; box-shadow: 0px 0px 1px 1px skyblue;">Happy 9th birthday, Dear garage 48 make sure you have an extra shot for me</textarea>
+            </div>
+
+            <div class="col-sm-12 lower-part">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="50%" align="center"><input type="submit" name="" class="draft" id="draft"
+                                value="Save the draft" /></td>
+                        <td width="50%" align="center"><input type="submit" name="" class="done" id="done"
+                                value="Done" /></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <script src="../js/edit-birthday.js"></script>
+</body>
+
+</html>

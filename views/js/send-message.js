@@ -46,6 +46,7 @@ const loadMessage = () => {
         messageText.value = message.content;
       }
     })
+    .then((result) => { })
     .catch((err) => console.log(err));
 };
 saveDraft.addEventListener('click', handleClick('?draft=true'));

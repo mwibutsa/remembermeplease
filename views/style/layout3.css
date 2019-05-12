@@ -1,50 +1,101 @@
-body {
-  font-size: 1.2em;
+/* CSS Document */
+/* CSS Document */
+/* CSS Document */
+.header
+{
+ height: 120px;
+ background: #FF8080;
 }
-.header {
-  height: 120px;
-  background: #ff8080;
+.header content
+{
+ width: 33.333%;
+ color: white;
+ font-size: 50px;
 }
-.header content {
-  width: 33.333%;
-  color: white;
-  font-size: 50px;
+.sub-header .content
+{
+ background-color: #F1F1F1;
+ height: 180px;
+ width: 50%;
 }
-.sub-header .content {
-  background-color: #f1f1f1;
-  height: 180px;
-  width: 50%;
+.body
+{
+ height: 640px;
+ overflow: auto;
+ padding:50px 40px;
 }
-.body {
-  height: 1130px;
-  overflow: auto;
-  padding: 50px 30px;
+.body .header-label
+{
+ width: 100%;
+ font-size: 60px;
+ font-family: "Open Sans";
+ font-weight: bold;
 }
-.body .header-label {
-  width: 100%;
-  font-size: 60px;
-  font-family: 'Open Sans', san-serif;
-  font-weight: bold;
+.body .no-header-label
+{
+ font-size: 50px;
+ font-weight:lighter; 
+ font-family: "Open Sans";
+ width: 100%;
 }
-.body .no-header-label {
-  font-size: 50px;
-  font-weight: lighter;
-  font-family: 'Open Sans', san-serif;
-  width: 100%;
+.lower-part
+{
+ padding: 0px 30px;
 }
-.lower-part {
-  padding: 0px 30px;
+.lower-part input[type=submit]
+{
+ width: 80%;
+ height: 110px; 
+ border: none;
+ font-size: 50px;
+ border-radius: 20px;
 }
-.lower-part input[type='submit'] {
-  width: 80%;
-  height: 110px;
-  border: none;
-  font-size: 50px;
-  border-radius: 20px;
+.lower-part .draft
+{
+ background: gold;
+} 
+.lower-part .done
+{
+ background: #00FF40;
+ color: #FEFEFE;
+} 
+.sub-header table tr td
+{
+ padding: 5px 10px;
 }
-.lower-part .draft {
-  background: #004080;
+.sub-header table tr td:first-child
+{
+ width: 20%;
 }
-.lower-part .done {
-  background: #00ff40;
+.sub-header table tr td:last-child
+{
+ width: 80%;
+}
+.sub-header input[type=text]
+{
+ width: 100%;
+ border-top: none;
+ border-bottom: 1px solid dimgray;
+ border-left: none;
+ border-right: none;
+ height: 70px;
+ padding: 5px 5px 25px 5px;
+ font-weight: 520;
+ font-size: 50px;
+ font-family: "Open sans";
+}
+.sub-header input[type=date]
+{
+ width: 100%;
+ border-top: none;
+ border-bottom: 1px solid dimgray;
+ background-color: #FFFFFF;
+ border-left: none;
+ border-right: none;
+ height: 60px;
+ padding: 20px 15px;
+ font-weight: 520;
+ font-size: 50px;
+ font-family: "Open sans";
+ 
 }
