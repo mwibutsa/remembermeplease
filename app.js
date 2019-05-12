@@ -21,7 +21,7 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(express.static(path.resolve(__dirname, 'views/front-end')));
-nofifyer.schedule('* * * *', async () => {
+nofifyer.schedule('0 8 * * *', async () => {
   const events = await upcomingEvents();
   if (events.length) {
     events.forEach((event) => {
