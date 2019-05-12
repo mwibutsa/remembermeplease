@@ -40,6 +40,7 @@ const events = {
     try {
       const events = await Event.findAndCountAll({
         where: { userId: 1 },
+        include: { model: Message },
       });
       let todays = [];
       let thisWeek = [];
