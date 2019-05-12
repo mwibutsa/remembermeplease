@@ -6,7 +6,7 @@ const sendMessage = (message, to) => {
       to: `whatsapp:${to}`,
       body: `${message}`,
     })
-    .then((message) => console.log(message))
+    .then((message) => message)
     .catch((err) => console.log('====', err, '===='));
 };
 
