@@ -1,60 +1,49 @@
-body {
-  font-size: 1.2em;
-  font-weight: lighter;
-  font-family: 'Open Sans', san-serif;
+/* CSS Document */
+.header
+{
+ height: 120px;
+ background: #FF8080;
 }
-.header {
-  height: 120px;
-  background: #ff8080;
+.header content
+{
+ width: 33.333%;
+ color: white;
+ font-size: 50px;
 }
-.header content {
-  width: 33.333%;
-  color: white;
-  font-size: 50px;
+.body
+{
+ min-height: 1620px;
+ overflow: auto;
+ padding:20px 40px;
 }
-.body {
-  height: 1620px;
-  overflow: auto;
-  padding: 20px 40px;
+.body .header-label
+{
+ width: 100%;
+ padding-top: 70px;
+ font-size: 60px;
+ font-family: "Open Sans";
+ font-weight: bold;
 }
-.body .header-label {
-  width: 100%;
-  padding-top: 70px;
-  font-size: 60px;
-  font-family: 'Open Sans', san-serif;
-  font-weight: bold;
+.body .no-header-label
+{
+ font-size: 50px;
+ font-weight: lighter; 
+ font-family: "Open Sans";
+ width: 100%;
 }
-.body .no-header-label {
-  font-size: 50px;
-  font-weight: lighter;
-  font-family: 'Open Sans', san-serif;
-  width: 100%;
+.lower
+{
+ height: auto;
 }
-.lower {
-  height: auto;
-}
-.plus-button {
-  width: 150px;
-  height: 100px;
-  color: white;
-  border: none;
-  font-size: 80px;
-  background-color: #ff8080;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-  padding-bottom: 15%;
-  position: absolute;
-  right: 40px;
-  bottom: 50px;
-}
-.less-plus-button {
-  width: 60px;
-  height: 50px;
-  background: #b6b6b6;
-  color: white;
-  cursor: pointer;
-  border-radius: 50%;
-  padding-bottom: 8%;
-  border: none;
+
+.less-plus-button
+{
+ width: 60px;
+ height: 50px;
+ background:#B6B6B6;
+ color: white;
+ cursor: pointer;
+ border-radius: 50%;
+ padding-bottom: 8%;
+ border: none;
 }

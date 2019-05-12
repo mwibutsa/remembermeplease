@@ -1,0 +1,18 @@
+/* CSS Document */
+.sipmle-page
+{
+ padding: 130px 10px;
+ text-align: center;
+}
+.simple-page p
+{
+ font-family: "Open Sans";
+}
+input[type=submit]
+{
+ width: 80%;
+ height: 110px; 
+ border: none;
+ font-size: 50px;
+ border-radius: 20px;
+}

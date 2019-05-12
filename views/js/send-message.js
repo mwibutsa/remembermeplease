@@ -27,19 +27,26 @@ const handleClick = (draft = '') => (event) => {
     body: JSON.stringify({ content: messageText.value }),
     headers: myHeaders,
   })
-    .then((result) => {})
+    .then((result) => {
+      if (result) {
+        window.location = 'congratulations.html';
+      }
+    })
     .catch((err) => console.log(err));
 };
 const loadMessage = () => {
+  const messageText = document.querySelector('#message');
   const queries = processQueries();
   fetch(`../events/${queries.id}/message`, {
     method: 'GET',
     headers: myHeaders,
-  }).then((message) => {
-    if (message) {
-      textArea.value = message.content;
-    }
-  });
+  })
+    .then((message) => {
+      if (message) {
+        messageText.value = message.content;
+      }
+    })
+    .catch((err) => console.log(err));
 };
 saveDraft.addEventListener('click', handleClick('?draft=true'));
 sendNow.addEventListener('click', handleClick(''));
