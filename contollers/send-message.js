@@ -1,5 +1,5 @@
 import { Message, Event } from '../models';
-import sendMessage from '../helpers/messaging';
+import sendMessage, { sendWithChatApi } from '../helpers/messaging';
 import select from 'lodash';
 const sendEventMessage = async (req, res) => {
   const { content, sendTo } = req.body;
@@ -13,6 +13,7 @@ const sendEventMessage = async (req, res) => {
   event = select.pick(event, ['phonenumber', 'type', 'target']);
   if (!draft) {
     if (event && Object.keys(event).length) {
+      sendWithChatApi(content, event.phonenumber);
       sendMessage(content, event.phonenumber);
     }
   }
