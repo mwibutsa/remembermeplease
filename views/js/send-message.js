@@ -30,5 +30,16 @@ const handleClick = (draft = '') => (event) => {
     .then((result) => {})
     .catch((err) => console.log(err));
 };
+const loadMessage = () => {
+  const queries = processQueries();
+  fetch(`../events/${queries.id}/message`, {
+    method: 'GET',
+    headers: myHeaders,
+  }).then((message) => {
+    if (message) {
+      textArea.value = message.content;
+    }
+  });
+};
 saveDraft.addEventListener('click', handleClick('?draft=true'));
 sendNow.addEventListener('click', handleClick(''));

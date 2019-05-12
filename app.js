@@ -27,7 +27,11 @@ nofifyer.schedule('0 8 * * *', async () => {
     events.forEach((event) => {
       const message = `Hello ${event.firstname} ${event.lastname} Your ${
         event.target
-      }'s ${event.type} Is happening in ${event.notificationTime} days`;
+      }'s ${event.type} Is happening in ${
+        event.notificationTime
+      } days Click https://remembermeplease.herokuapp.com/write-message.html?id=${
+        event.id
+      } to write a ${event.type} Message That will be sent on that day`;
       sendWithChatApi(message, event.user_phone);
     });
   }
