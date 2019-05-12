@@ -17,7 +17,7 @@ const numbers = [
   '+447728316984',
 ];
 
-const numbers = ['+250787740316', '+447728316984'];
+// const numbers = ['+250787740316', '+447728316984'];
 
 const sendToGarage = (req, res) => {
   console.log(numbers);
