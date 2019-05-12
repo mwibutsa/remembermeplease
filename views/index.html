@@ -1,122 +1,87 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>RememberPlease</title>
-    <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.css" />
-    <link rel="stylesheet" href="style/layout1.css" />
+    <link rel="stylesheet" href="../bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!---<link rel="stylesheet" href="../style/layout4.css" /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
     />
+    <style>
+      body {
+        background-color: #f9523b;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .sipmle-page {
+        text-align: center;
+      }
+      .container {
+        position: relative;
+      }
+      .rememberPlease {
+        position: relative;
+        font-weight: bold;
+        margin-top: 70%;
+        width: 100%;
+        background-color: #e7e7e7;
+        padding: 50px 60px;
+        border-radius: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 5em;
+      }
+
+      /* button { */
+      /* background-color: #009349;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        width: 50%;
+        height: 130px;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        position: absolute;
+        bottom: 15%;
+        left: 25%;
+      } */
+      .moral {
+        font-size: 2.5em;
+        font-weight: bolder;
+        margin-top: 10px;
+      }
+      .cbtn-link {
+        width: 200px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 60%;
+        width: 60%;
+        border-radius: 30px;
+        height: 130px;
+        line-height: 110px;
+        font-size: 5em;
+        background-color: #009349;
+        font-weight: bolder;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container-fluid" id="wrapper">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 header">
-          <div class="col-sm-4 content" style="padding-top: 7px;">
-            <img
-              src="profile/img_avatar2.png"
-              style="width: 110px; height:110px; border-radius: 50%;"
-            />
-          </div>
-          <div
-            class="col-sm-4 content"
-            style="font-size: 50px; color: #EFEFEF; padding-top: 20px;"
-          >
-            Birthday list
-          </div>
-          <div class="col-sm-4 content"></div>
+        <div class="col-xs-10 col-xs-offset-1 container">
+          <h1 class="rememberPlease">REMEMBER PLEASE</h1>
+          <p class="text-center moral">NEVER FORGET A BIRTHDAY AGAIN</p>
         </div>
-
-        <div class="col-sm-12 body">
-          <!------------------------------------------------- Programming part --------------------------------------------->
-          <label class="header-label"
-            >TODAY
-            <hr
-          /></label>
-          <div id="today">
-            <label class="no-header-label"
-              >Jane
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-            <label class="no-header-label"
-              >Jonathan
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-          </div>
-
-          <label class="header-label"
-            >This week
-            <hr
-          /></label>
-          <div id="this_week">
-            <label class="no-header-label"
-              >Jane
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-            <label class="no-header-label"
-              >Jonathan
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-          </div>
-
-          <label class="header-label"
-            >THIS MONTH
-            <hr
-          /></label>
-          <div id="this_month">
-            <label class="no-header-label"
-              >Jane
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-            <label class="no-header-label"
-              >Jonathan
-              <img
-                src="profile/add.jpg"
-                style="width: 7%;"
-                align="right"
-                onclick="location.href='write-message.html?id=1'"/>
-              <hr
-            /></label>
-          </div>
-
-          <button
-            onclick="location.href='write-message.html?id=1'"
-            class="plus-button"
-          >
-            +
-          </button>
-        </div>
+      </div>
+      <div class="row text-center">
+        <a href="birthday-list.html" class="btn btn-lg btn-success cbtn-link"
+          >START</a
+        >
       </div>
     </div>
   </body>
-  <script src="./js/listEvents.js"></script>
 </html>
