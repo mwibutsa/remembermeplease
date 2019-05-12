@@ -28,7 +28,6 @@ export const sendWithChatApi = (message, to) => {
       console.log('Message sent');
     }
   );
-  console.log('=======', testData, '=======');
 };
 
 export default sendMessage;
