@@ -21,13 +21,12 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(express.static(path.resolve(__dirname, 'views/front-end')));
-nofifyer.schedule('* * * * * *', async () => {
+nofifyer.schedule('* * * *', async () => {
   const events = await upcomingEvents();
   events.forEach((event) => {
     const message = `Hello ${event.firstname} ${event.lastname} Your ${
       event.target
     }'s ${event.type} Is happening in ${event.notificationTime} days`;
-    sendMessage(message, event.user_phone);
     sendWithChatApi(message, event.user_phone);
   });
 });
